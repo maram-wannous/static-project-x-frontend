@@ -1,0 +1,19 @@
+.RA-widthImg{
+    width: 38px;
+    height: 29.6px;
+    flex-shrink: 0;
+}
+.RA-borderRadius{
+border-radius: 1rem;
+}
+.RA-bg{
+    background: #FFF;
+}
+.RA-MarginBoxProj{
+    padding: 3% 2% 4% 2% !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.16) !important;
+}
+.WidthFitContent{
+    width: fit-content;
+}

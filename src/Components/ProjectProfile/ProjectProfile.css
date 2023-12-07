@@ -1,0 +1,19 @@
+.sl-projects {
+    width: 350px;
+    background:white;
+    border-radius: 15px;
+    box-shadow: 1px 3px #c9c1c1;
+    padding: 32px;
+    margin: 10px;
+}
+.sl-projects .mr-profilproject {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mr-profileprojectcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

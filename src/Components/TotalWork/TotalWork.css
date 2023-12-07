@@ -1,0 +1,40 @@
+.si-container1{
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+    background-color:white;
+    padding: 20px; 
+    border-color: #cfd3d4; 
+    box-shadow: 1px 3px  #c9c1c1;
+    margin: 10px;
+    position: relative;
+}
+.si-container1 .si-circle {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-color: rgb(252, 164, 1) rgb(4, 4, 66)  rgb(4, 4, 66) rgb(252, 164, 1);
+    background-clip: content-box;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+    /*padding-top:48px ;
+    margin-left: 30%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    */
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}

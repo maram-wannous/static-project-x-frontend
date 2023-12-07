@@ -1,0 +1,29 @@
+.sa_sidebar{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: 100vh;
+    z-index: 9;
+}
+.sa_textSidbar {
+    color: #5D7285;
+    font-family: Poppins;
+    font-size: 18px;
+    transition: 0.3s;
+    margin: 10px;
+    border-radius: 6px;
+}
+.sa_textSidbar:hover {
+    color: black;
+}
+.sa_sidebar .active {
+    background-color: #f2f3fe;
+    color: #FF8500;
+}
+.sa_showSidbar {
+    top: 5px;
+    right: 20px;
+    color: #FF8500;
+    font-size: 25px;
+    cursor: pointer;
+}
