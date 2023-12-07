@@ -3,6 +3,7 @@ import { Frame } from "../../../assets/Frame";
 import { Logo } from "../../../assets/Logo";
 import loginImg from '../../../assets/login.png'
 import './login.css'
+import { Link } from "react-router-dom";
 
 
 export default function Login() {
@@ -14,6 +15,7 @@ export default function Login() {
                     <Logo/>
                 </div>
                 <div>
+                    <Link to={'/dashboard'} className="mr-login-link">go to dashboard</Link>
                     <Frame/>
                     Asite Product System
                 </div>
