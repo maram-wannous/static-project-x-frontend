@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom'
 
 export const AdminAllProjects = () => {
 
+  const isAdmin = true;
+
   var settings = {
     dots: true,
     customPaging: (i) => {
@@ -55,30 +57,32 @@ export const AdminAllProjects = () => {
       </div>
 
       <Slider {...settings} className='sa_containerSlideAllProjects'>
-      <div className='sa_AdminAllProjects_BodyDiv'>
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
+        <div className='sa_AdminAllProjects_BodyDiv'>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>          
         </div>
         <div className='sa_AdminAllProjects_BodyDiv'>
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>          
         </div>
         <div className='sa_AdminAllProjects_BodyDiv'>
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
-          <CardProject />
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
+          <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>          
         </div>
+        
+        
       </Slider>
     </div>
   )

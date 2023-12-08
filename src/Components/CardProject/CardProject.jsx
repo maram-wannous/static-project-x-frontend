@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './CardProject.css'
 import { FiEdit } from "react-icons/fi";
 import { BsHourglassBottom } from "react-icons/bs";
@@ -6,13 +7,13 @@ import imgTeam from './../../assets/imgTeam.png';
 import { Link } from 'react-router-dom'
 
 
-export const CardProject = () => {
+export const CardProject = ({isAdmin}) => {
   return (
     <div className='sa_cardProject'>
         <div className='d-flex align-items-center justify-content-between border-bottom pb-2'>
             <div className='d-flex align-items-center gap-3 '>
                 <p className='sa_ProjectName'>Adoddle</p>
-                <Link to={'/dashboard/adminprojects/update'}><FiEdit className='sa_FiEdit'/></Link>
+                {isAdmin && <Link to={'/dashboard/adminprojects/update/1'}><FiEdit className='sa_FiEdit'/></Link>}
             </div>
             <p className='sa_buttOfftrack'>Offtrack</p>
         </div>

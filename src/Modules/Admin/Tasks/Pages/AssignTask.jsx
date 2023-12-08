@@ -84,48 +84,9 @@ export default function AssignTask() {
 
                     </div>
                 </div>
-                <div className="row mt-5">
-                    <div className="col-lg-4">
-                        <h6 className="mx-2 RA-margin-Right w-50">Reporter</h6>
-                        <div className="accordion accordion-flush RA-border-table mx-2 my-2" id="accordionExample1">
-                            <div className="accordion-item">
-                                <h2 className="accordion-header RA-bgWhite" id="headingOne1">
-                                    <button className="accordion-button colorWhite" type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne1" aria-expanded="true"
-                                            aria-controls="collapseOne1">
-                                        Team Lead
-                                    </button>
-                                </h2>
-                                <div id="collapseOne1" className="accordion-collapse collapse show"
-                                     aria-labelledby="headingOne1" data-bs-parent="#accordionExample1">
-                                    <div className="accordion-body">
-                                        <table className="table table-hover">
-                                            <tbody>
-                                            <tr>
-                                                <th scope="row">Yash</th>
-                                                <td>Team Lead</td>
-                                                <td><input type="checkbox"/></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Yash</th>
-                                                <td>Team Lead</td>
-                                                <td><input type="checkbox"/></td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Yash</th>
-                                                <td>Team Lead</td>
-                                                <td><input type="checkbox"/></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
+                <div className="row mt-5 d-flex justify-content-between">
+                    
+                    <div className="col-lg-4 mx-2">
                         <h6 className="mx-2 RA-margin-Right w-50">Assignee</h6>
                         <div className="accordion accordion-flush  RA-border-table mx-2 my-2" id="accordionExample">
                             <div className="accordion-item">

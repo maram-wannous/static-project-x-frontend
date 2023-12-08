@@ -22,6 +22,7 @@ import ProjectDetails from "../Modules/User/Projects/Pages/ProjectDetails";
 import AdminProjects from "../Modules/Admin/AdminProjects/Pages/AdminProjects.jsx";
 import PerformancePage from "../Modules/Performance/Pages/PerformancePage.jsx";
 import Login from "../Modules/Login/Pages/Login.jsx";
+import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProjectDetails.jsx";
 
 const isAuthenticated= true;
 
@@ -73,8 +74,12 @@ export const routes = [
                 element: <AddProject/>,
             },
             {
-                path: 'adminprojects/update',
+                path: 'adminprojects/update/:id',
                 element: <UpdateProject/>,
+            },
+            {
+                path: 'adminprojects/details/1',
+                element: <AdminProjectDetails/>,
             },
             {
                 path: 'tasks',
