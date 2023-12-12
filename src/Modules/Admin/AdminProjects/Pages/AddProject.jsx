@@ -99,7 +99,6 @@ export default function AddProject(){
                 {/*</div>*/}
                 <div className="d-flex justify-content-end">
                     <button className="btn mx-2 px-1 py-1 fs-5">Create</button>
-                    <button className="btn colorOrange RA-bgLightBlue fs-5 px-1 py-1">Delete</button>
                 </div>
             </div>
         </div>

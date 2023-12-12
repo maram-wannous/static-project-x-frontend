@@ -111,15 +111,14 @@ export default function AssignSubTask() {
     </div>
 </div>
 
-                {   <div className="row justify-content-end mt-5">
+                   <div className="row justify-content-end mt-5">
                         <div className="col-lg-3  ">
                         <div className="d-flex justify-content-end align-items-end">
 
                             <button className="btn mx-2 px-1 py-1 fs-5 w-50">Create</button>
-                            <button className="btn colorOrange RA-bgLightBlue w-50 fs-5 px-1 py-1">Delete</button>
                         </div>
                         </div>
-                    </div>}
+                    </div>
              {/*   <div className="row align-items-end">
 
                     <div className="row justify-content-between">

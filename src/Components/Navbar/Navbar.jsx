@@ -59,7 +59,7 @@ export default function Navbar(){
                 <p className="sa_info">U.P, India</p>
             </div>
             <div>
-                <img className="sa_personPic" src={person_pic} alt="person" />
+                <Link to={'/dashboard/profile'}><img className="sa_personPic" src={person_pic} alt="person" /></Link>
             </div>
         </div>
     </nav>

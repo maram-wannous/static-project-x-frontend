@@ -136,11 +136,8 @@ export default function AssignTask() {
                                         Attachment
                                     </button>
                                 </div>
-                                <div className="col-6">
+                                <div className="col-12">
                                     <button className="btn w-100">Create</button>
-                                </div>
-                                <div className="col-6">
-                                    <button className="btn colorOrange RA-bgLightBlue w-100">Delete</button>
                                 </div>
                             </div>
                         </div>
