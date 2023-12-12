@@ -16,7 +16,7 @@ export default function Home() {
                 <h1 className='header-style' >Dashboard</h1>
             </div>
 
-            <div>
+            <div className="py-2">
                 <div className="row px-4">
                     <div className="col-md-6 mt-2">
                         <ProjectDash/>
