@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import './AdminTasks.css';
+import { Form } from 'react-bootstrap';
 
 export default function AssignTask() {
+    const [status, setStatus] = useState('');
+    const [priority, setPriority] = useState('');
+
     return (
         <div className="RA-bgBlue">
             <h1 className="RA-HeaderStyle RA-Width-fit">Tasks / Create Tasks</h1>
@@ -39,41 +44,30 @@ export default function AssignTask() {
                             </div>
                         </div>
                     </div>
-                     <div className="d-flex mt-3 ms-3">
-                        <div className="dropdown mx-4 col-md-6 col-sm-6 align-items-end justify-content-center d-flex">
-                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                Status
-                            </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li>
-                                    <button className="dropdown-item" type="button">Action</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Another action</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Something else here</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="dropdown col-md-6 col-sm-6 align-items-center d-flex">
-                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                Priority
-                            </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li>
-                                    <button className="dropdown-item" type="button">Action</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Another action</button>
-                                </li>
-                                <li>
-                                    <button className="dropdown-item" type="button">Something else here</button>
-                                </li>
-                            </ul>
-                        </div>
+                    <div className='d-flex align-items-center justify-content-start flex-wrap gap-2'>
+                    <Form.Group className="col-md-4 d-flex flex-column justify-content-start align-items-start ms-2" controlId="status">
+                        <Form.Label className="RA-Label RA-fsLabel ps-2">Status</Form.Label>
+                        <Form.Select style={{width: '200px'}}
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}>
+                            <option disabled value="">Select State</option>
+                            <option value="OnProgress">OnProgress</option>
+                            <option value="OnHold">OnHold</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Canceled">Canceled</option>
+                        </Form.Select>
+                    </Form.Group>
+                    <Form.Group className="col-md-4 d-flex flex-column justify-content-start align-items-start ms-2" controlId="status">
+                        <Form.Label className="RA-Label RA-fsLabel ps-2">Priority</Form.Label>
+                        <Form.Select style={{width: '200px'}}
+                            value={priority}
+                            onChange={(e) => setPriority(e.target.value)}>
+                            <option disabled value="">Select State</option>
+                            <option value="high">high</option>
+                            <option value="low">low</option>
+                        </Form.Select>
+                    </Form.Group>
                     </div>
                 </div>
                 <div className="row">

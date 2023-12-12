@@ -1,7 +1,12 @@
+import { useState } from 'react';
+import { Form } from 'react-bootstrap';
+
 export default function AssignSubTask() {
-    return(
+    const [status, setStatus] = useState('');
+
+    return (
         <div className="RA-bgBlue">
-            <h1 className="RA-HeaderStyle RA-Width-fit">SubTask / Create SubTask</h1>
+            <h1 className="RA-HeaderStyle RA-Width-fit">Tasks / Create Tasks</h1>
 
             <div className="RA-bgWhite RA-MarginBox">
                 <div className="d-flex row justify-content-center">
@@ -37,6 +42,19 @@ export default function AssignSubTask() {
                             </div>
                         </div>
                     </div>
+                    <Form.Group className="col-md-12 d-flex flex-column justify-content-start align-items-start ms-2" controlId="status">
+                        <Form.Label className="RA-Label RA-fsLabel ps-2">Status</Form.Label>
+                        <Form.Select style={{width: '200px'}}
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}>
+                            <option disabled value="">Select State</option>
+                            <option value="OnProgress">OnProgress</option>
+                            <option value="OnHold">OnHold</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Canceled">Canceled</option>
+                        </Form.Select>
+                    </Form.Group>
                 </div>
                 <div className="row">
                     <div
@@ -46,96 +64,66 @@ export default function AssignSubTask() {
 
                     </div>
                 </div>
+                <div className="row mt-5 d-flex justify-content-between">
+                    
+                    <div className="col-lg-4 mx-2">
+                        <h6 className="mx-2 RA-margin-Right w-50">Assignee</h6>
+                        <div className="accordion accordion-flush  RA-border-table mx-2 my-2" id="accordionExample">
+                            <div className="accordion-item">
+                                <h2 className="accordion-header RA-bgWhite" id="headingOne">
+                                    <button className="accordion-button colorWhite" type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                        Team Lead
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" className="accordion-collapse collapse show"
+                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div className="accordion-body">
+                                        <table className="table table-hover">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">Yash</th>
+                                                <td>Team Lead</td>
+                                                <td><input type="checkbox"/></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Yash</th>
+                                                <td>Team Lead</td>
+                                                <td><input type="checkbox"/></td>
 
-<div className="d-flex">
-                <div className="d-flex row mt-3 ms-3">
-                    <label className="ms-1">Assign to</label>
-                    <div className="dropdown col-md-6 col-sm-6 align-items-center d-flex">
-                        <button className=" btn-secondary dropdown-toggle RA-border-drop px-4 mt-2" type="button" id="dropdownMenu2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            Riham Aji
-                        </button>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li>
-                                <button className="dropdown-item" type="button">Action</button>
-                            </li>
-                            <li>
-                                <button className="dropdown-item" type="button">Another action</button>
-                            </li>
-                            <li>
-                                <button className="dropdown-item" type="button">Something else here</button>
-                            </li>
-                        </ul>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Yash</th>
+                                                <td>Team Lead</td>
+                                                <td><input type="checkbox"/></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div className="row col-lg-4">
+
+                        <div className="row align-items-end">
+
+                            <div className="row justify-content-between">
+                                <div className="col-12 mb-3">
+                                    <button className="btn  w-100 colorBgGreen RA-attch RA-bgLightGreen RA-colorGreen">Add
+                                        Attachment
+                                    </button>
+                                </div>
+                                <div className="col-12">
+                                    <button className="btn w-100">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div className="d-flex row mt-3 ms-3">
-                    <label className="ms-1">Priority</label>
-                    <div className="dropdown col-md-6 col-sm-6 align-items-center d-flex">
-                        <button className=" btn-secondary dropdown-toggle  RA-border-drop px-4 mt-2" type="button" id="dropdownMenu2"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            Priority
-                        </button>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li>
-                                <button className="dropdown-item" type="button">High</button>
-                            </li>
-                            <li>
-                                <button className="dropdown-item" type="button">Another action</button>
-                            </li>
-                            <li>
-                                <button className="dropdown-item" type="button">Something else here</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-    <div className="d-flex row mt-3 ms-3">
-        <label className="ms-1">Task Assigning</label>
-        <div className="dropdown col-md-6 col-sm-6 align-items-center d-flex">
-            <button className=" btn-secondary dropdown-toggle  RA-border-drop px-4 mt-2" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                Priority
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <li>
-                    <button className="dropdown-item" type="button">Pending</button>
-                </li>
-                <li>
-                    <button className="dropdown-item" type="button">Another</button>
-                </li>
-                <li>
-                    <button className="dropdown-item" type="button">Something else here</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-                   <div className="row justify-content-end mt-5">
-                        <div className="col-lg-3  ">
-                        <div className="d-flex justify-content-end align-items-end">
-
-                            <button className="btn mx-2 px-1 py-1 fs-5 w-50">Create</button>
-                        </div>
-                        </div>
-                    </div>
-             {/*   <div className="row align-items-end">
-
-                    <div className="row justify-content-between">
-                        <div className="col-12 mb-3">
-                            <button className="btn  w-100 colorBgGreen RA-attch RA-bgLightGreen RA-colorGreen">Add
-                                Attachment
-                            </button>
-                        </div>
-                        <div className="col-6">
-                            <button className="btn w-100">Create</button>
-                        </div>
-                        <div className="col-6">
-                            <button className="btn colorOrange RA-bgLightBlue w-100">Delete</button>
-                        </div>
-                    </div>
-                </div>*/}
-
             </div>
         </div>
     )

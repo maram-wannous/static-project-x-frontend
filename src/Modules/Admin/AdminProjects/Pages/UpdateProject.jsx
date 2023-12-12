@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './Project.css';
+import { Form } from 'react-bootstrap';
 
 export default function UpdateProject(){
+    const [status, setStatus] = useState('');
     return (
         <div className="RA-bgBlue">
             <h1 className="RA-HeaderStyle">Projects / Create Project</h1>
@@ -39,18 +42,18 @@ export default function UpdateProject(){
                             </div>
                         </div>
                     </div>
-                    <div className="d-flex mt-3">
-                        <div className="dropdown mx-4 col-md-6 col-sm-6 align-items-end justify-content-start d-flex">
-                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                Status
-                            </button>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><button className="dropdown-item" type="button">Action</button></li>
-                                <li><button className="dropdown-item" type="button">Another action</button></li>
-                                <li><button className="dropdown-item" type="button">Something else here</button></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <Form.Group className="col-md-12 d-flex flex-column justify-content-start align-items-start ms-2" controlId="status">
+                        <Form.Label className="RA-Label RA-fsLabel ps-2">Status</Form.Label>
+                        <Form.Select style={{width: '200px'}}
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}>
+                            <option disabled value="">Select State</option>
+                            <option value="OnTrack">OnTrack</option>
+                            <option value="OffTrack">OffTrack</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Complete">Completed</option>
+                        </Form.Select>
+                    </Form.Group>
                 </div>
                 <div className="row">
                     <div
@@ -95,9 +98,6 @@ export default function UpdateProject(){
                         </div>
                     </div>
                 </div>
-                {/*<div className="w-50 RA-border-table RA-margin-table RA-margin-Right">*/}
-                {/*    */}
-                {/*</div>*/}
                 <div className="d-flex justify-content-end">
                     <button className="btn mx-2 px-1 py-1 fs-5">Update</button>
                     <button className="btn colorOrange RA-bgLightBlue fs-5 px-1 py-1">Delete</button>
