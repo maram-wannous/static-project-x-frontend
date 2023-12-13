@@ -22,10 +22,10 @@ export default function Home() {
                         <ProjectDash/>
                     </div>
                     <div className="col-md-6 mt-2">
-                        <div className="RA-bgBlue">
-                            <div className="RA-bgWhite RA-MarginBoxProj">
+                        <div className="RA-bgBlue  mr-width-chart-home">
+                            <div className="RA-bgWhite RA-MarginBoxProj w-100 h-100">
                                 <h1 className="RA-HeaderStyle colorBlack">Tasks</h1>
-                                <div className="text-center d-flex justify-content-center ">
+                                <div className="text-center d-flex justify-content-center">
                                     <div className="w-71">
                                         <TaskDash/>
                                     </div>
