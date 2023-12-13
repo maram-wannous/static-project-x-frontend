@@ -24,7 +24,7 @@ export const CardTask = ({isAdmin}) => {
                         </div>
                     </div>
                 </div>
-                <div className='d-flex gap-4'>
+                <div className='d-flex gap-4 flex-wrap'>
                     <div>
                         <p className='sa_DateTextUserProjects mb-0'>Start Date</p>
                         <div className='d-flex gap-1 sa-startdate'>
