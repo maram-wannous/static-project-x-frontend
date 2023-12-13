@@ -77,7 +77,7 @@ export default function PerformancePage() {
                         </div>
                     </div>
                 </div>
-                <Slider {...settings} className=' sa_containerSlidePerformanc'>
+                <Slider {...settings} className='sa_containerSlidePerformanc'>
                 <div className='sa_bodyBox bg-transparent mb-2'>
                     <div className='sa_backTask'>
                         <CardTask />
