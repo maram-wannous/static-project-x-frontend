@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './AdminAllprojects.css'
 import { CardProject } from '../../../../Components/CardProject/CardProject';
 import "slick-carousel/slick/slick.css";
@@ -49,13 +50,14 @@ export const AdminAllProjects = () => {
     ]
   };
 
+
   return (
     <div className=''>
       <div className="sa_divTitle d-flex align-items-center justify-content-between">
         <p className="header-style">Projects</p>
         <Link to={'/dashboard/adminprojects/add'}><button className='btn'>Create</button></Link>
       </div>
-
+      <div className='pb-4'>
       <Slider {...settings} className='sa_containerSlideAllProjects'>
         <div className='sa_AdminAllProjects_BodyDiv'>
           <Link to={'/dashboard/adminprojects/details/1'}><CardProject isAdmin={isAdmin} /></Link>
@@ -84,6 +86,7 @@ export const AdminAllProjects = () => {
         
         
       </Slider>
+      </div>
     </div>
   )
 }

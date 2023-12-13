@@ -51,6 +51,7 @@ export default function UserTasks() {
                 <p className="header-style mb-0 ">Tasks</p>
                 <button className='btn mx-5'><Link to={'/dashboard/tasks/assigntask'}>Assign Task</Link></button>
             </div>
+            <div className='pb-4'>
             <Slider {...settings} className='sa_containerSlideAllProjects'>
                 <div className='sa_bodyBox bg-transparent'>
                     
@@ -134,6 +135,7 @@ export default function UserTasks() {
                     </div>
                 </div>
             </Slider>
+            </div>
         </div>
     )
 }

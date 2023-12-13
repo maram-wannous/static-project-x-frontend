@@ -51,6 +51,7 @@ export default function UserTasks() {
                 <p className="header-style mb-0 ">Tasks</p>
                 {/* <Link to={'/dashboard/usertasks/Kanban'}><button className='sa_btnKanbanView'><CiCalendar className='sa_IconBtnKanban' />Kanban View</button></Link> */}
             </div>
+            <div className='pb-4'>
             <Slider {...settings} className='sa_containerSlideAllProjects'>
                 <div className='sa_bodyBox bg-transparent'>
                     <div className='sa_backTask'>
@@ -131,6 +132,7 @@ export default function UserTasks() {
                     </div>
                 </div>
             </Slider>
+            </div>
         </div>
     )
 }

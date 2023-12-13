@@ -47,7 +47,7 @@ export default function UserProjects() {
     };
 
     return (
-        <div>
+        <>
             <div className="sa_divTitle d-flex align-items-center justify-content-between">
                 <p className="header-style mb-0">Projects</p>
                 <form className="sa_formUserProject">
@@ -55,6 +55,7 @@ export default function UserProjects() {
                     <input type="search" placeholder="Search for anything..." className="sa_searchText sa_searchUserProject" />
                 </form>
             </div>
+            <div className='pb-4'>
             <Slider {...settings} className='sa_containerSlideAllProjects sa_containerSlideUserProjects'>
                 <div className='sa_AdminAllProjects_BodyDiv'>
                     <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
@@ -81,6 +82,7 @@ export default function UserProjects() {
                     <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
                 </div>
             </Slider>
-        </div>
+            </div>
+        </>
     )
 }
