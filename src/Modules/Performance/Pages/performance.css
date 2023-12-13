@@ -19,13 +19,9 @@
     color: white;
 }
 
-.sa_containerSlidePerformanc .slick-dots {
-    bottom: 10px;
-}
-
 .sa_containerSlidePerformanc .slick-next {
-    right: 42.5% !important;
-    top: 92% !important;
+    right: 43% !important;
+    top: 96% !important;
     z-index: 10;
 }
 .sa_containerSlidePerformanc .slick-next::before {
@@ -38,7 +34,7 @@
     line-height: normal !important;
 }
 .sa_containerSlidePerformanc .slick-prev {
-    top: 92% !important;
+    top: 96% !important;
     left: 40% !important; 
     z-index: 10;  
 }
