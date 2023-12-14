@@ -7,10 +7,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import {routes} from "./Routes/Router";
 
 
-const router = createBrowserRouter(routes
-  // {
-  //   basename: '/static-project-x-frontend',
-  // }
+const router = createBrowserRouter(routes,
+  {
+    basename: '/static-project-x-frontend',
+  }
   );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
