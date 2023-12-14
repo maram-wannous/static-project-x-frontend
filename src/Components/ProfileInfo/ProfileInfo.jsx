@@ -12,6 +12,14 @@ import { Link } from 'react-router-dom'
 // import React from "react";
 
 export default function ProfileInfo({pageProfile}) {
+
+  const emailStorage = localStorage.getItem('bearer');
+
+  const handleLogout = ()=>{
+    localStorage.removeItem('bearer');
+    window.location.pathname = '/';
+  }
+  
   return (
     <div className="sl-info">
         <div className="sl-divimg">
@@ -46,9 +54,9 @@ export default function ProfileInfo({pageProfile}) {
           </li>
           <li className='mr-line'></li>
           {
-            pageProfile && (<li><Link to={'/dashboard/profile/updateprofile'} className='mr-up-del-btn'>Update Profile</Link></li>)
+            pageProfile && (emailStorage === 'admin@gmail.com') && (<li><Link to={'/dashboard/profile/updateprofile'} className='mr-up-del-btn'>Update Profile</Link></li>)
           }
-          <li><button className='mr-up-del-btn mt-3'>Logout</button></li>
+          <li><button className='mr-up-del-btn mt-3' onClick={handleLogout}>Logout</button></li>
         </ul>
     </div>
   );

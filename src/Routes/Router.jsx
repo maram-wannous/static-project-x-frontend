@@ -24,9 +24,8 @@ import PerformancePage from "../Modules/Performance/Pages/PerformancePage.jsx";
 import Login from "../Modules/Login/Pages/Login.jsx";
 import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProjectDetails.jsx";
 
-const isAuthenticated= true;
 
-// const isAuthenticated = localStorage.getItem('bearer');
+const isAuthenticated = localStorage.getItem('bearer');
 export const routes = [
     {
         path: '/',

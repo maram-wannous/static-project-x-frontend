@@ -11,6 +11,7 @@ import {  useEffect, useState } from "react";
 
 export default function Sidbar() {
 
+    const emailStorage = localStorage.getItem('bearer');
     const [isOpen,setIsOpen] = useState(false);
     const [windowSize, setWindowSize] = useState({
         width: undefined
@@ -43,7 +44,7 @@ export default function Sidbar() {
                         style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
                         >Home</p>
                     </NavLink>
-                    <NavLink to='/dashboard/adminprojects' className="d-flex align-items-center gap-2 sa_textSidbar"
+                    <NavLink to={(emailStorage === 'admin@gmail.com') ?'/dashboard/adminprojects' : '/dashboard/userprojects'} className="d-flex align-items-center gap-2 sa_textSidbar"
                         style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
                     >
                         <RiProjectorFill />
@@ -51,7 +52,7 @@ export default function Sidbar() {
                         style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
                         >Projects</p>
                     </NavLink>
-                    <NavLink to='/dashboard/tasks' className="d-flex align-items-center gap-2 sa_textSidbar"
+                    <NavLink to={(emailStorage === 'admin@gmail.com') ? '/dashboard/tasks' : '/dashboard/usertasks'} className="d-flex align-items-center gap-2 sa_textSidbar"
                         style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
                     >
                         <FaTasks />
@@ -75,30 +76,17 @@ export default function Sidbar() {
                        style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
                         >Performance</p>
                     </NavLink>
-                    <NavLink to='/dashboard/users' className="d-flex align-items-center gap-2 sa_textSidbar"
-                        style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
-                    >
-                        <FaUsers/>
-                        <p className='m-0' 
-                        style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
-                        >Users</p>
-                    </NavLink>
-                    <NavLink to='/dashboard/usertasks' className="d-flex align-items-center gap-2 sa_textSidbar"
-                        style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
-                    >
-                        <FaUsers/>
-                        <p className='m-0' 
-                        style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
-                        >User tasks</p>
-                    </NavLink>
-                    <NavLink to='/dashboard/userprojects' className="d-flex align-items-center gap-2 sa_textSidbar"
-                        style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
-                    >
-                        <FaUsers/>
-                        <p className='m-0' 
-                        style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
-                        >User Projects</p>
-                    </NavLink>
+                    {
+                        (emailStorage === 'admin@gmail.com') && 
+                        <NavLink to='/dashboard/users' className="d-flex align-items-center gap-2 sa_textSidbar"
+                            style={{padding: isOpen ? '10px 8px 10px 15px': '10px 13px'}}
+                        >
+                            <FaUsers/>
+                            <p className='m-0' 
+                            style={{display: windowSize.width < 991?(isOpen ? 'block' : 'none'): 'block'}}
+                            >Users</p>
+                        </NavLink>
+                    }
 
                     <div className="d-lg-none sa_showSidbar position-absolute"
                         onClick={()=>setIsOpen(!isOpen)}
