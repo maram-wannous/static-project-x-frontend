@@ -33,7 +33,6 @@ export const routes = [
         element: <App/>,
     },
     {
-        basename: '/static-project-x-frontend',
         path: '/dashboard',
         element: <GuardedRoutes
                 isAccessable={isAuthenticated}
