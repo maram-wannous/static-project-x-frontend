@@ -23,8 +23,8 @@ export default function Login() {
             
             setLoading(false);
             localStorage.setItem('bearer', email);
-            window.location.pathname= '/dashboard';
-        }else if (email === admin || email === user || password >=6 ) {
+            window.location.pathname= '/dashboard/';
+        }else if (email !== admin || email !== user || password < 6 ) {
             setLoading(false);
             setErr("wrong email or password");
         }

@@ -26,6 +26,7 @@ import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProje
 
 
 const isAuthenticated = localStorage.getItem('bearer');
+
 export const routes = [
     
     {
