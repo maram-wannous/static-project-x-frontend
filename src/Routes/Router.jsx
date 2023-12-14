@@ -28,6 +28,10 @@ import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProje
 const isAuthenticated = localStorage.getItem('bearer');
 export const routes = [
     {
+        basename: '/static-project-x-frontend',
+        children: [
+    
+    {
         path: '/',
         element: <App/>,
     },
@@ -126,6 +130,7 @@ export const routes = [
                 path: '/dashboard/userprojects/details',
                 element: <ProjectDetails/>,
             },
+        
 
             
 
@@ -147,6 +152,9 @@ export const routes = [
             // }
 
         ]
-    },
+
+    }]
+    
+    }
    
 ]
