@@ -31,11 +31,11 @@ const isAuthenticated = localStorage.getItem('bearer');
 export const routes = [
     
     {
-        path: '/',
+        path: '/static-project-x-frontend/',
         element: <App/>,
     },
     {
-        path: '/dashboard',
+        path: '/static-project-x-frontend/dashboard',
         element: <GuardedRoutes
                 isAccessable={isAuthenticated}
                 OnSucess={() => <Dashboard />}
@@ -43,94 +43,94 @@ export const routes = [
         ,
         children: [
             {
-                path: '/dashboard/',
+                path: '/static-project-x-frontend/dashboard/',
                 element: <Home/>,
             },
             {
-                path: '/dashboard/profile',
+                path: '/static-project-x-frontend/dashboard/profile',
                 element: <Profile/>,
             },
             {
-                path: '/dashboard/profile/updateprofile',
+                path: '/static-project-x-frontend/dashboard/profile/updateprofile',
                 element: <UpdateProfile/>,
             },
             {
-                path: '/dashboard/performance',
+                path: '/static-project-x-frontend/dashboard/performance',
                 element: <PerformancePage/>,
             },
             {
-                path: '/dashboard/worklog',
+                path: '/static-project-x-frontend/dashboard/worklog',
                 element: <WorkLog/>,
             },
             // Admin pages
             {
-                path: '/dashboard/adminprojects',
+                path: '/static-project-x-frontend/dashboard/adminprojects',
                 element: <AdminProjects/>,
             },
             {
-                path: '/dashboard/adminprojects/projects',
+                path: '/static-project-x-frontend/dashboard/adminprojects/projects',
                 element: <AdminAllProjects/>,
             },
             {
-                path: '/dashboard/adminprojects/add',
+                path: '/static-project-x-frontend/dashboard/adminprojects/add',
                 element: <AddProject/>,
             },
             {
-                path: '/dashboard/adminprojects/update/:id',
+                path: '/static-project-x-frontend/dashboard/adminprojects/update/:id',
                 element: <UpdateProject/>,
             },
             {
-                path: '/dashboard/adminprojects/details/:id',
+                path: '/static-project-x-frontend/dashboard/adminprojects/details/:id',
                 element: <AdminProjectDetails/>,
             },
             {
-                path: '/dashboard/tasks',
+                path: '/static-project-x-frontend/dashboard/tasks',
                 element: <AdminTasks/>,
             },
             {
-                path: '/dashboard/tasks/update/:id',
+                path: '/static-project-x-frontend/dashboard/tasks/update/:id',
                 element: <UpdateTask/>,
             },
             {
-                path: '/dashboard/tasks/subtask',
+                path: '/static-project-x-frontend/dashboard/tasks/subtask',
                 element: <AdminSubTask/>,
             },
             {
-                path: '/dashboard/tasks/assigntask',
+                path: '/static-project-x-frontend/dashboard/tasks/assigntask',
                 element: <AssignTask/>,
             },
             {
-                path: '/dashboard/tasks/assignsubtask',
+                path: '/static-project-x-frontend/dashboard/tasks/assignsubtask',
                 element: <AssignSubTask/>,
             },
             {
-                path: '/dashboard/users',
+                path: '/static-project-x-frontend/dashboard/users',
                 element: <ViewUsers/>,
             },
             {
-                path: '/dashboard/users/add',
+                path: '/static-project-x-frontend/dashboard/users/add',
                 element: <AddUser/>,
             },
             {
-                path: '/dashboard/users/update',
+                path: '/static-project-x-frontend/dashboard/users/update',
                 element: <UpdateUser/>,
             },
 
             // User Pages
             {
-                path: '/dashboard/usertasks',
+                path: '/static-project-x-frontend/dashboard/usertasks',
                 element: <UserTasks/>,
             },
             {
-                path: '/dashboard/usertasks/subtask',
+                path: '/static-project-x-frontend/dashboard/usertasks/subtask',
                 element: <UserSubTask/>,
             },
             {
-                path: '/dashboard/userprojects',
+                path: '/static-project-x-frontend/dashboard/userprojects',
                 element: <UserProjects/>,
             },
             {
-                path: '/dashboard/userprojects/:id',
+                path: '/static-project-x-frontend/dashboard/userprojects/:id',
                 element: <ProjectDetails/>,
             },
         

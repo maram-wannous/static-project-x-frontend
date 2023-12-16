@@ -9,7 +9,7 @@ import {routes} from "./Routes/Router";
 
 const router = createBrowserRouter(routes
   // {
-  //   basename: '/static-project-x-frontend',
+  //   basename: '/static-project-x-frontend/',
   // }
   );
 
