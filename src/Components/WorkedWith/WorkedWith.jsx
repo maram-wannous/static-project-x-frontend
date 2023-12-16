@@ -1,4 +1,4 @@
-import './WorkedWith.css';
+import './workedWith.css';
 import ImgText from '../ImgText/ImgText';
 import { useState } from 'react';
 
