@@ -4,7 +4,7 @@ import R3 from './../../../assets/R3.png';
 import R4 from './../../../assets/R4.png';
 import R5 from './../../../assets/R5.png'; 
 import TotalWork from './../../../Components/TotalWork/TotalWork';
-import './WorkLog.css';
+import './worklog.css';
 
 export default function WorkLog(){
     return (
