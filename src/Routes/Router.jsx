@@ -33,7 +33,9 @@ export const routes = [
     {
         path: '/static-project-x-frontend/',
         element: <App/>,
-    },
+        children: [
+
+       
     {
         path: '/static-project-x-frontend/dashboard',
         element: <GuardedRoutes
@@ -157,5 +159,7 @@ export const routes = [
         ]
     
     }
+]
+}
    
 ]
