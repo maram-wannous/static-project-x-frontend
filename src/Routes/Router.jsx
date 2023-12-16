@@ -35,7 +35,7 @@ export const routes = [
         element: <App/>,
     }, 
     {
-        path: '/static-project-x-frontend/dashboard',
+        path: '/static-project-x-frontend/dashboard/',
         element: <GuardedRoutes
                 isAccessable={isAuthenticated}
                 OnSucess={() => <Dashboard />}
