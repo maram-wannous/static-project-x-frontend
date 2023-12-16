@@ -59,3 +59,28 @@ ul {
 .RA-Width-fit{
     width:fit-content !important;
 }
+
+
+.mr-pagination-containers .pagination li a {
+    color: #FF8500;
+    }
+.mr-pagination-containers .pagination li a:hover {
+    color: #FF8500;
+}
+.mr-pagination-containers .pagination li.active a{
+    border-color: #FF8500;
+    background-color: #FF8500;
+    color: white;
+}
+    
+@media(max-width: 500px) {
+    .pagination {
+        width: 300px;
+    }
+    .pagination .page-link{
+        font-size: x-small;
+    }
+    .pagination .page-item {
+        font-size:x-small;
+    }
+}

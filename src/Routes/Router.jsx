@@ -23,6 +23,7 @@ import AdminProjects from "../Modules/Admin/AdminProjects/Pages/AdminProjects.js
 import PerformancePage from "../Modules/Performance/Pages/PerformancePage.jsx";
 import Login from "../Modules/Login/Pages/Login.jsx";
 import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProjectDetails.jsx";
+import UpdateTask from "../Modules/Admin/Tasks/Pages/UpdateTask.jsx";
 
 
 const isAuthenticated = localStorage.getItem('bearer');
@@ -79,12 +80,16 @@ export const routes = [
                 element: <UpdateProject/>,
             },
             {
-                path: '/dashboard/adminprojects/details/1',
+                path: '/dashboard/adminprojects/details/:id',
                 element: <AdminProjectDetails/>,
             },
             {
                 path: '/dashboard/tasks',
                 element: <AdminTasks/>,
+            },
+            {
+                path: '/dashboard/tasks/update/:id',
+                element: <UpdateTask/>,
             },
             {
                 path: '/dashboard/tasks/subtask',
@@ -125,7 +130,7 @@ export const routes = [
                 element: <UserProjects/>,
             },
             {
-                path: '/dashboard/userprojects/details',
+                path: '/dashboard/userprojects/:id',
                 element: <ProjectDetails/>,
             },
         

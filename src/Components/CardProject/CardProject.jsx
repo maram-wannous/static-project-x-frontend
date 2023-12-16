@@ -3,48 +3,51 @@ import './CardProject.css'
 import { FiEdit } from "react-icons/fi";
 import { BsHourglassBottom } from "react-icons/bs";
 import { SlFolderAlt } from "react-icons/sl";
-import imgTeam from './../../assets/imgTeam.png';
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
-export const CardProject = ({isAdmin}) => {
+export const CardProject = ({isAdmin, id, project_title, end_data, status, describtion, team_members}) => {
+    const [users, setUsers] = useState([]);
+    // get user to select team
+    useEffect(() => {
+        axios.get('https://mar-services.onrender.com/team_members')
+        .then((data) => setUsers(data.data))
+        .catch((err) => console.log(err));
+    }, []);
+
   return (
     <div className='sa_cardProject'>
         <div className='d-flex align-items-center justify-content-between border-bottom pb-2'>
             <div className='d-flex align-items-center gap-3 '>
-                <p className='sa_ProjectName'>Adoddle</p>
-                {isAdmin && <Link to={'/dashboard/adminprojects/update/1'}><FiEdit className='sa_FiEdit'/></Link>}
+                <Link to={isAdmin? `/dashboard/adminprojects/details/${id}` : `/dashboard/userprojects/${id}`}><p className='sa_ProjectName'>{project_title}</p></Link>
+                {isAdmin && <Link to={`/dashboard/adminprojects/update/${id}`}><FiEdit className='sa_FiEdit'/></Link>}
             </div>
-            <p className='sa_buttOfftrack'>Offtrack</p>
+            
+            <p className= {
+                status === 'Completed' ? 'sa_buttcompleted'
+                :status === "OffTrack" ? 'sa_buttOfftrack'
+                : 'sa_buttonhold'
+            }
+            >{status}</p>
         </div>
         <div className='pt-4 pb-4 px-2 sa_CardText'>
-            <p className='mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
-            <p className='mb-0'> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p className='mb-0'>{describtion}</p>
         </div>
         <div className='d-flex align-items-center gap-2 pb-3'>
             <BsHourglassBottom className='sa_BsHourglassBottom'/>
-            <p className='sa_DateProject mb-0'>05 APRIL 2023</p>
+            <p className='sa_DateProject mb-0'>{end_data}</p>
         </div>
         <div className='d-flex align-items-center justify-content-between px-2 py-3'>
-            <div className='d-flex align-items-center position-relative'>
-                <div className='sa_CardImageTeam position-absolute'>
-                    <img className='sa_imgTeam sa_imgTeam1' src={imgTeam} alt="" />
-                </div>
-                <div className='sa_CardImageTeam sa_CardImageTeam2 position-absolute'>
-                    <img className='sa_imgTeam sa_imgTeam2' src={imgTeam} alt="" />
-                </div>
-                <div className='sa_CardImageTeam sa_CardImageTeam3 position-relative '>
-                    <img className='sa_imgTeam sa_imgTeam3' src={imgTeam} alt="" />
-                </div>
-                <div className='sa_CardImageTeam sa_CardImageTeam4 position-relative'>
-                    <img className='sa_imgTeam sa_imgTeam4' src={imgTeam} alt="" />
-                </div>
-                <div className='sa_CardImageTeam sa_CardImageTeam5 position-relative'>
-                    <img className='sa_imgTeam' src={imgTeam} alt="" />
-                </div>
-                <div className='sa_CardImageTeam sa_CardImageTeam6 position-relative'>
-                    <img className='sa_imgTeam' src={imgTeam} alt="" />
-                </div>
+            <div className='d-flex align-items-center justify-content-center'>
+                {
+                    users.map((user) => (
+                        team_members.map((item, index) => (
+                            user.id === item && <img key={index} src={user.image} className='sa_imgTeam' alt="" />
+                    ))))
+                }
+                
             </div>
             <div className='d-flex align-items-center gap-2'>
                 <SlFolderAlt className='sa_SlFolderAlt'/>

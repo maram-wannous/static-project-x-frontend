@@ -4,6 +4,7 @@
     border-radius: 1rem;
     background-color: #FFF;
     padding: 1.64rem 1.09rem;
+    height: 300px;
 }
 
 .sa_ProjectName {
@@ -22,9 +23,10 @@
     color: black;
 }
 
-.sa_buttOfftrack {
+.sa_buttOfftrack,
+.sa_buttcompleted,
+.sa_buttonhold {
     text-align: center;
-    color: #BD1E1E;
     font-size: 0.95rem;
     font-style: normal;
     font-weight: 500;
@@ -32,10 +34,12 @@
     /* width: 5rem;
     height: 2.1875em; */
     border-radius: 0.25rem;
-    background: rgba(194, 131, 131, 0.20);
     margin: 0;
     padding: 10px;
 }
+.sa_buttOfftrack {color: #BD1E1E; background: rgba(194, 131, 131, 0.20);}
+.sa_buttcompleted {color: green;background: rgba(70, 117, 56, 0.2);}
+.sa_buttonhold {color: #ffd900; background: rgba(143, 143, 51, 0.2);}
 
 .sa_CardText {
     color: #424242;
@@ -43,6 +47,7 @@
     font-style: normal;
     font-weight: 400;
     max-width: 35.25rem;
+    height: 120px;
 }
 
 .sa_BsHourglassBottom {
@@ -71,10 +76,7 @@
     line-height: normal;
 }
 
-.sa_imgTeam,
-.sa_CardImageTeam {
-    width: 1.84338rem;
-    height: 1.86988rem;
+.sa_imgTeam {
     width: 1.84338rem;
     height: 1.86988rem;
     flex-shrink: 0;
@@ -83,7 +85,7 @@
 
 }
 
-.sa_CardImageTeam2 {
+/* .sa_CardImageTeam2 {
     left: 19%;
     z-index: 113;
 }
@@ -106,7 +108,7 @@
 .sa_CardImageTeam6 {
     left: 25%;
     z-index: 333;
-}
+} */
 
 @media (max-width : 1790px) {
     .sa_cardProject {

@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import axios from 'axios';
 import Loading from '../../../../Routes/Loading';
 
-export default function AssignTask() {
+export default function UpdateTask() {
     const [project_id, setProject_id] = useState(0)
     const [task_title, setTask_title] = useState('')
     const [project_type, setProject_type] = useState('')
@@ -18,6 +18,10 @@ export default function AssignTask() {
     const [projects, setProjects] = useState([])
     const [loading, setLoading] = useState(false);
 
+     // get project id to update it
+     const id = Number(window.location.pathname.replace("/static-project-x-frontend/dashboard/tasks/update/", ""));
+
+
 
     // get user to select team
     useEffect(() => {
@@ -30,6 +34,23 @@ export default function AssignTask() {
     useEffect(() => {
         axios.get('https://mar-services.onrender.com/projects')
         .then((data) => setProjects(data.data))
+        .catch((err) => console.log(err));
+    }, []);
+
+    // get task details to update it
+    useEffect(() => {
+        axios.get(`https://mar-services.onrender.com/tasks/${id}`)
+        .then((data) => {
+            setTask_title(data.data.task_title);
+            setProject_type(data.data.project_type);
+            setProject_id(data.data.project_id);
+            setStart_date(data.data.start_date);
+            setEnd_data(data.data.end_data);
+            setDescribtion(data.data.describtion);
+            setStatus(data.data.status);
+            setPriority(data.data.priority);
+            setMember_name(data.data.member_name)
+        })
         .catch((err) => console.log(err));
     }, []);
 
@@ -220,7 +241,7 @@ export default function AssignTask() {
                         </div>
                     </div>
                     <div className="d-flex justify-content-end">
-                        <button className="btn"  onClick={HandleSubmite}>Create</button>
+                        <button className="btn"  onClick={HandleSubmite}>Update</button>
                     </div>
 
                 </div>
