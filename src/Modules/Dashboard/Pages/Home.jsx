@@ -2,7 +2,7 @@ import ProjectDash from "../../../Components/ProjectDash/ProjectDash.jsx";
 import {TaskDash} from "../../../Components/TaskDash/TaskDash.jsx";
 import WorkLog from "../../../Components/WorkLog/WorkLog.jsx";
 import Performance from "../../../Components/Performance/Performance.jsx";
-import "./Dashboard.css";
+import "./dashboard.css";
 import '../../../Components/TaskDash/TaskDash.css';
 import '../../../Components/Performance/Performance.css';
 // import '../../../Components/WorkLog/WorkLog.css'
