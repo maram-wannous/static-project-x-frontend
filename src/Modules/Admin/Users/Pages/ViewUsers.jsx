@@ -38,6 +38,34 @@ export default function ViewUsers() {
                                 </div>
                             </td>
                         </tr>
+                        <tr className="py-5 align-middle fw-normal">
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                                <div className="d-flex align-items-center gap-3">
+                                    <Link to={'/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                                    <RiDeleteBin5Fill className="colorRed RA-table-icon"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr className="py-5 align-middle fw-normal">
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                                <div className="d-flex align-items-center gap-3">
+                                    <Link to={'/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                                    <RiDeleteBin5Fill className="colorRed RA-table-icon"/>
+                                </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
