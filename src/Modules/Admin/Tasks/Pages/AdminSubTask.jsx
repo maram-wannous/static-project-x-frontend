@@ -14,7 +14,7 @@ export default function AdminSubTask() {
         <div>
             <div className="d-flex justify-content-between sa_divTitle">
                 <p className="header-style">Task / Make an Automatic Payment System that enable the design</p>
-                <Link to={'/dashboard/tasks/assignsubtask'}><button className="btn">Assign Sub task</button></Link>
+                <Link to={'/static-project-x-frontend/dashboard/tasks/assignsubtask'}><button className="btn">Assign Sub task</button></Link>
             </div>
             <div className="sa_bodyBox sa_divTitle">
                 <div className='sa_CardTask'>
@@ -51,9 +51,7 @@ export default function AdminSubTask() {
                             <div className='sa_DivImgTask'>
                                 <img src={ImgTask} alt="" />
                             </div>
-                            {/* <Link to={'/dashboard/tasks/subtask'}> */}
                                 <button><MdOutlineInsertComment className='sa_btnToSubTask' /></button>
-                            {/* </Link> */}
                         </div>
                         <div className="d-flex align-items-center flex-column mt-4">
                             <div className='sa_backSubTask w-100'>

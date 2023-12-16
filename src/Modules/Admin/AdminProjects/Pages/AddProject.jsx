@@ -38,7 +38,7 @@ export default function AddProject(){
                 team_members: team_members,
             });
             setLoading(false);
-            window.location.pathname = '/dashboard/adminprojects/projects';
+            window.location.pathname = '/static-project-x-frontend/dashboard/adminprojects/projects';
         } catch (err) {
             setLoading(false);
             console.log(err);

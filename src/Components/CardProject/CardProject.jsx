@@ -21,8 +21,8 @@ export const CardProject = ({isAdmin, id, project_title, end_data, status, descr
     <div className='sa_cardProject'>
         <div className='d-flex align-items-center justify-content-between border-bottom pb-2'>
             <div className='d-flex align-items-center gap-3 '>
-                <Link to={isAdmin? `/dashboard/adminprojects/details/${id}` : `/dashboard/userprojects/${id}`}><p className='sa_ProjectName'>{project_title}</p></Link>
-                {isAdmin && <Link to={`/dashboard/adminprojects/update/${id}`}><FiEdit className='sa_FiEdit'/></Link>}
+                <Link to={isAdmin? `/static-project-x-frontend/dashboard/adminprojects/details/${id}` : `/static-project-x-frontend/dashboard/userprojects/${id}`}><p className='sa_ProjectName'>{project_title}</p></Link>
+                {isAdmin && <Link to={`/static-project-x-frontend/dashboard/adminprojects/update/${id}`}><FiEdit className='sa_FiEdit'/></Link>}
             </div>
             
             <p className= {

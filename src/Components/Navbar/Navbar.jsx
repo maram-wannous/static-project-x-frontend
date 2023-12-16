@@ -55,11 +55,11 @@ export default function Navbar(){
                 </div>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-end gap-1">
-                <Link to={'/dashboard/profile'}><p className="sa_name">Anima Agrawal</p></Link>
+                <Link to={'/static-project-x-frontend/dashboard/profile'}><p className="sa_name">Anima Agrawal</p></Link>
                 <p className="sa_info">U.P, India</p>
             </div>
             <div>
-                <Link to={'/dashboard/profile'}><img className="sa_personPic" src={person_pic} alt="person" /></Link>
+                <Link to={'/static-project-x-frontend/dashboard/profile'}><img className="sa_personPic" src={person_pic} alt="person" /></Link>
             </div>
         </div>
     </nav>

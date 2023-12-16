@@ -52,7 +52,7 @@ export default function AssignTask() {
                 member_name: member_name,
             });
             setLoading(false);
-            window.location.pathname = '/dashboard/tasks';
+            window.location.pathname = '/static-project-x-frontend/dashboard/tasks';
         } catch (err) {
             setLoading(false);
             console.log(err);

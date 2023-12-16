@@ -58,28 +58,28 @@ export default function UserProjects() {
             <div className='pb-4'>
             <Slider {...settings} className='sa_containerSlideAllProjects sa_containerSlideUserProjects'>
                 <div className='sa_AdminAllProjects_BodyDiv'>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
                 </div>
                 <div className='sa_AdminAllProjects_BodyDiv'>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
                 </div>
                 <div className='sa_AdminAllProjects_BodyDiv'>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
-                    <Link to={'/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
+                    <Link to={'/static-project-x-frontend/dashboard/userprojects/details'}><CardProject /></Link>
                 </div>
             </Slider>
             </div>

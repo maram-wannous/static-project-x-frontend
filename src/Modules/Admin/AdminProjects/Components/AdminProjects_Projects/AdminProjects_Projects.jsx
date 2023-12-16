@@ -7,7 +7,7 @@ export const AdminProjects_Projects = () => {
         <div className='bg-white p-2 sa_AdminProjects_ProjectDiv'>
             <div className='d-flex align-items-center justify-content-between flex-wrap pb-4'>
                 <p className='sa_AdminProjects_ProjectsTitle'>Projects</p>
-                <Link to={'/dashboard/adminprojects/projects'}>
+                <Link to={'/static-project-x-frontend/dashboard/adminprojects/projects'}>
                     <button className='sa_AdminProjects_ProjectsViweAll'>View all</button>
                 </Link>
             </div>

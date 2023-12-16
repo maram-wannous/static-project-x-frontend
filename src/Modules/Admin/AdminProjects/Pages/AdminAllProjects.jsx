@@ -49,7 +49,7 @@ useEffect(()=>{
     <div>
       <div className="sa_divTitle d-flex align-items-center justify-content-between">
         <p className="header-style">Projects</p>
-        <Link to={'/dashboard/adminprojects/add'}><button className='btn'>Create</button></Link>
+        <Link to={'/static-project-x-frontend/dashboard/adminprojects/add'}><button className='btn'>Create</button></Link>
       </div>
 
       <div className="row p-2">

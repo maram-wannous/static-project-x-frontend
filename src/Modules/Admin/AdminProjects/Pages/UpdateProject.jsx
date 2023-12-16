@@ -60,7 +60,7 @@ export default function UpdateProject(){
                 team_members: team_members,
             });
             setLoading(false);
-            window.location.pathname = '/dashboard/adminprojects/projects';
+            window.location.pathname = '/static-project-x-frontend/dashboard/adminprojects/projects';
         } catch (err) {
             setLoading(false);
             console.log(err);
@@ -71,7 +71,7 @@ export default function UpdateProject(){
      async function handleDeleteProject() {
         try{
             await axios.delete(`https://mar-services.onrender.com/projects/${id}`);
-            window.location.pathname = '/dashboard/adminprojects/projects';
+            window.location.pathname = '/static-project-x-frontend/dashboard/adminprojects/projects';
         }catch(err){
             console.log(err);
         }

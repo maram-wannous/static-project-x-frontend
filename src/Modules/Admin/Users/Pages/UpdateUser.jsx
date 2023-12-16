@@ -152,7 +152,7 @@ export default function UpdateUser(){
                         {image && <img src={imgSrc} alt="" width={150}/>}
                         </div>
                     </div>
-                    <Link to={'/dashboard/users'}>
+                    <Link to={'/static-project-x-frontend/dashboard/users'}>
                     <div className="d-flex py-3 align-items-center justify-content-sm-center justify-content-lg-end ">
                             <button className="btn mx-4 px-4 py-2 display-4 border-0">Update User</button>
                     </div>

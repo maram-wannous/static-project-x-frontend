@@ -7,7 +7,7 @@ export default function ViewUsers() {
         <div className="RA-bgBlue">
             <div className="d-flex align-items-center justify-content-between">
                 <h1 className="RA-HeaderStyle">View Users</h1>
-                <Link to={'/dashboard/users/add'}><button type="button" className="btn mx-4 px-2 py-2 display-4 border-0">Add Users</button></Link>
+                <Link to={'/static-project-x-frontend/dashboard/users/add'}><button type="button" className="btn mx-4 px-2 py-2 display-4 border-0">Add Users</button></Link>
             </div>
             <div className="RA-bgWhite RA-MarginBox">
                 <div className="table-responsive" style={{maxHeight: "300px"}}>
@@ -33,7 +33,7 @@ export default function ViewUsers() {
                             <td>@mdo</td>
                             <td>
                                 <div className="d-flex align-items-center gap-3">
-                                    <Link to={'/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                                    <Link to={'/static-project-x-frontend/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
                                     <RiDeleteBin5Fill className="colorRed RA-table-icon"/>
                                 </div>
                             </td>
@@ -47,7 +47,7 @@ export default function ViewUsers() {
                             <td>@mdo</td>
                             <td>
                                 <div className="d-flex align-items-center gap-3">
-                                    <Link to={'/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                                    <Link to={'/static-project-x-frontend/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
                                     <RiDeleteBin5Fill className="colorRed RA-table-icon"/>
                                 </div>
                             </td>
@@ -61,7 +61,7 @@ export default function ViewUsers() {
                             <td>@mdo</td>
                             <td>
                                 <div className="d-flex align-items-center gap-3">
-                                    <Link to={'/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                                    <Link to={'/static-project-x-frontend/dashboard/users/update'}><BiPencil className="colorGreen RA-table-icon"/></Link>
                                     <RiDeleteBin5Fill className="colorRed RA-table-icon"/>
                                 </div>
                             </td>

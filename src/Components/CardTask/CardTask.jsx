@@ -57,11 +57,11 @@ export const CardTask = ({isAdmin, id, task_title, describtion, member_name, sta
                     <div className='sa_DivImgTask'>
                         <img src={member_img} alt="" />
                     </div>
-                    <Link to={isAdmin ? '/dashboard/tasks/subtask' : '/dashboard/usertasks/subtask'}>
+                    <Link to={isAdmin ? '/static-project-x-frontend/dashboard/tasks/subtask' : '/static-project-x-frontend/dashboard/usertasks/subtask'}>
                         <button><MdOutlineInsertComment className='sa_btnToSubTask' /></button>
                     </Link>
                     {
-                        isAdmin && <Link to={`/dashboard/tasks/update/${id}`}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                        isAdmin && <Link to={`/static-project-x-frontend/dashboard/tasks/update/${id}`}><BiPencil className="colorGreen RA-table-icon"/></Link>
                     }
                     {
                         isAdmin && <div className='mr-delet-task' onClick={handleDeleteTask} ><RiDeleteBin5Fill/></div>

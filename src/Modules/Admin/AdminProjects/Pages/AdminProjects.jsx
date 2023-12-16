@@ -40,17 +40,6 @@ export default function AdminProjects() {
                         <TeamMember/>
                     </div>
                 </div>
-                {/* <div className="sa_divStaPerfTMem d-flex justify-content-center align-items-center flex-wrap gap-2">
-                    <div className="sa_divProjectsStats">
-                        <TaskDash />
-                    </div>
-                    <div className="sa_divPerformance">
-                        <Performance/>
-                    </div>
-                    <div className="sa_divTeamMember py-4">
-                        <TeamMember/>
-                    </div>
-                </div> */}
                 <div className="sa_divProjects">
                     <AdminProjects_Projects />
                 </div>

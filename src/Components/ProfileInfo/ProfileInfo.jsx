@@ -17,7 +17,7 @@ export default function ProfileInfo({pageProfile}) {
 
   const handleLogout = ()=>{
     localStorage.removeItem('bearer');
-    window.location.pathname = '/';
+    window.location.pathname = '/static-project-x-frontend/';
   }
   
   return (
@@ -54,7 +54,7 @@ export default function ProfileInfo({pageProfile}) {
           </li>
           <li className='mr-line'></li>
           {
-            pageProfile && (emailStorage === 'admin@gmail.com') && (<li><Link to={'/dashboard/profile/updateprofile'} className='mr-up-del-btn'>Update Profile</Link></li>)
+            pageProfile && (emailStorage === 'admin@gmail.com') && (<li><Link to={'/static-project-x-frontend/dashboard/profile/updateprofile'} className='mr-up-del-btn'>Update Profile</Link></li>)
           }
           <li><button className='mr-up-del-btn mt-3' onClick={handleLogout}>Logout</button></li>
         </ul>
