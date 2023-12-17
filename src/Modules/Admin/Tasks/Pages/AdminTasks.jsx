@@ -22,7 +22,6 @@ export default function UserTasks() {
                 const total = data.headers['x-total-count'];
                 setPageCount(Math.ceil(total / limit));
                 setTasks(data.data);
-                console.log(data);
         })
         .catch((err)=> console.log(err));
     },[]);

@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import axios from 'axios';
 import Loading from '../../../../Routes/Loading';
 
-export default function AssignSubTask() {
+export default function UpdateSubtask() {
     const [task_id, setTask_id] = useState(0)
     const [subtask_title, setSubtask_title] = useState('')
     const [subtask_type, setSubtask_type] = useState('')
@@ -18,7 +18,7 @@ export default function AssignSubTask() {
     const [loading, setLoading] = useState(false);
 
      // get project id to update it
-    //  const id = Number(window.location.pathname.replace("/static-project-x-frontend/dashboard/tasks/subtask/update/", ""));
+     const id = Number(window.location.pathname.replace("/static-project-x-frontend/dashboard/tasks/subtask/update/", ""));
 
 
 
@@ -37,20 +37,20 @@ export default function AssignSubTask() {
     }, []);
 
     // get subtask details to update it
-    // useEffect(() => {
-    //     axios.get(`https://mar-services.onrender.com/subtasks/${id}`)
-    //     .then((data) => {
-    //         setSubtask_title(data.data.subtask_title);
-    //         setSubtask_type(data.data.subtask_type);
-    //         setTask_id(data.data.task_id);
-    //         setStart_date(data.data.start_date);
-    //         setEnd_data(data.data.end_data);
-    //         setDescribtion(data.data.describtion);
-    //         setStatus(data.data.status);
-    //         setMember_name(data.data.member_name)
-    //     })
-    //     .catch((err) => console.log(err));
-    // }, []);
+    useEffect(() => {
+        axios.get(`https://mar-services.onrender.com/subtasks/${id}`)
+        .then((data) => {
+            setSubtask_title(data.data.subtask_title);
+            setSubtask_type(data.data.subtask_type);
+            setTask_id(data.data.task_id);
+            setStart_date(data.data.start_date);
+            setEnd_data(data.data.end_data);
+            setDescribtion(data.data.describtion);
+            setStatus(data.data.status);
+            setMember_name(data.data.member_name)
+        })
+        .catch((err) => console.log(err));
+    }, []);
 
 
 
@@ -59,7 +59,7 @@ export default function AssignSubTask() {
         setLoading(true);
         e.preventDefault();
         try {
-           await axios.post('https://mar-services.onrender.com/subtasks', {
+           await axios.put(`https://mar-services.onrender.com/subtasks/${id}`, {
                 task_id: task_id,
                 subtask_type: subtask_type,
                 subtask_title: subtask_title,
@@ -228,7 +228,7 @@ export default function AssignSubTask() {
                         </div>
                     </div>
                     <div className="d-flex justify-content-end">
-                        <button className="btn"  onClick={HandleSubmite}>Create</button>
+                        <button className="btn"  onClick={HandleSubmite}>Update</button>
                     </div>
 
                 </div>

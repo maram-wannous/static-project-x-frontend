@@ -24,16 +24,12 @@ import PerformancePage from "../Modules/Performance/Pages/PerformancePage.jsx";
 import Login from "../Modules/Login/Pages/Login.jsx";
 import AdminProjectDetails from "../Modules/Admin/AdminProjects/Pages/AdminProjectDetails.jsx";
 import UpdateTask from "../Modules/Admin/Tasks/Pages/UpdateTask.jsx";
+import UpdateSubtask from "../Modules/Admin/Tasks/Pages/UpdateSubtask.jsx";
 
 
 const isAuthenticated = localStorage.getItem('bearer');
 
 export const routes = [
-    
-    {
-        path: '/static-project-x-frontend/',
-        children: [
-
     
     {
         path: '/static-project-x-frontend/',
@@ -97,8 +93,12 @@ export const routes = [
                 element: <UpdateTask/>,
             },
             {
-                path: '/static-project-x-frontend/dashboard/tasks/subtask',
+                path: '/static-project-x-frontend/dashboard/tasks/subtask/:id',
                 element: <AdminSubTask/>,
+            },
+            {
+                path: '/static-project-x-frontend/dashboard/tasks/subtask/update/:id',
+                element: <UpdateSubtask/>,
             },
             {
                 path: '/static-project-x-frontend/dashboard/tasks/assigntask',
@@ -127,7 +127,7 @@ export const routes = [
                 element: <UserTasks/>,
             },
             {
-                path: '/static-project-x-frontend/dashboard/usertasks/subtask',
+                path: '/static-project-x-frontend/dashboard/usertasks/subtask/:id',
                 element: <UserSubTask/>,
             },
             {
@@ -160,10 +160,6 @@ export const routes = [
             // }
 
         ]
-    }
-    ]
-
-    
     }
    
 ]

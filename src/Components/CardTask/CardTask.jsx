@@ -9,7 +9,7 @@ import axios from 'axios';
 import { BiPencil } from 'react-icons/bi';
 
 
-export const CardTask = ({isAdmin, id, task_title, describtion, member_name, start_date, end_data, status, preority, member_img}) => {
+export const CardTask = ({isAdmin, isSubtask, id, task_title, describtion, member_name, start_date, end_data, status, preority, member_img}) => {
 
      //handeling delete task
      async function handleDeleteTask() {
@@ -31,7 +31,7 @@ export const CardTask = ({isAdmin, id, task_title, describtion, member_name, sta
                         <p className='sa_titleTaskCard mb-0 '>{task_title}</p>
                         <div className='d-flex align-items-center gap-2 flex-wrap'>
                             <p className='mb-0 sa_TextP'>#{describtion} <span className='sa_TextSpan'>{member_name}</span></p>
-                            <p className='sa_btnType mb-0'>{preority}</p>
+                            {!isSubtask && <p className='sa_btnType mb-0'>{preority}</p>}
                             <p className='sa_btnStatus mb-0'>{status}</p>
                         </div>
                     </div>
@@ -57,11 +57,14 @@ export const CardTask = ({isAdmin, id, task_title, describtion, member_name, sta
                     <div className='sa_DivImgTask'>
                         <img src={member_img} alt="" />
                     </div>
-                    <Link to={isAdmin ? '/static-project-x-frontend/dashboard/tasks/subtask' : '/static-project-x-frontend/dashboard/usertasks/subtask'}>
+                    <Link to={isAdmin ? `/static-project-x-frontend/dashboard/tasks/subtask/${id}` : `/static-project-x-frontend/dashboard/usertasks/subtask/${id}`}>
                         <button><MdOutlineInsertComment className='sa_btnToSubTask' /></button>
                     </Link>
                     {
-                        isAdmin && <Link to={`/static-project-x-frontend/dashboard/tasks/update/${id}`}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                        isAdmin && !isSubtask && <Link to={`/static-project-x-frontend/dashboard/tasks/update/${id}`}><BiPencil className="colorGreen RA-table-icon"/></Link>
+                    }
+                    {
+                        isAdmin && isSubtask && <Link to={`/static-project-x-frontend/dashboard/tasks/subtask/update/${id}`}><BiPencil className="colorGreen RA-table-icon"/></Link>
                     }
                     {
                         isAdmin && <div className='mr-delet-task' onClick={handleDeleteTask} ><RiDeleteBin5Fill/></div>
