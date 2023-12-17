@@ -32,6 +32,11 @@ export const routes = [
     
     {
         path: '/static-project-x-frontend/',
+        children: [
+
+    
+    {
+        path: '/static-project-x-frontend/',
         element: <App/>,
     }, 
     {
@@ -155,6 +160,9 @@ export const routes = [
             // }
 
         ]
+    }
+    ]
+
     
     }
    
