@@ -5,6 +5,7 @@ import loginImg from '../../../assets/login.png'
 import './login.css'
 import { useState } from "react";
 import Loading from "../../../Routes/Loading";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -13,11 +14,13 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setErr] = useState("");
-
-
+    const navigate = useNavigate();
+    
+    
+    
     let admin = 'admin@gmail.com';
     let user = 'user@gmail.com';
-
+    
     function handleSubmit (e) {
         e.preventDefault();
         setLoading(true);
@@ -25,7 +28,9 @@ export default function Login() {
             
             setLoading(false);
             localStorage.setItem('bearer', email);
-            window.location.pathname= '/static-project-x-frontend/dashboard/';
+            // <Navigate to='/static-project-x-frontend/dashboard/'/>
+            // window.location.pathname= '/static-project-x-frontend/dashboard/';
+            navigate("/static-project-x-frontend/dashboard/")
         }else if (email !== admin || email !== user || password < 6 ) {
             setLoading(false);
             setErr("wrong email or password");
