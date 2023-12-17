@@ -82,7 +82,7 @@ export default function UpdateTask() {
 
     return (
         <div className="RA-bgBlue">
-            <h1 className="RA-HeaderStyle RA-Width-fit">Tasks / Create Tasks</h1>
+            <h1 className="RA-HeaderStyle RA-Width-fit">Tasks / Update Tasks</h1>
             {loading && <Loading />}
             <div className="RA-bgWhite RA-MarginBox">
                 <div className="d-flex row justify-content-center">

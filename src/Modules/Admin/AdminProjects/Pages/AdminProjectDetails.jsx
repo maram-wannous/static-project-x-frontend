@@ -91,6 +91,7 @@ export default function AdminProjectDetails() {
                     tasks.map((item, index) => (
                         <div key={index} className='sa_backTask'>
                             <CardTask isAdmin={isAdmin}
+                                        id={item.id}
                                         task_title={item.task_title}
                                         describtion={item.describtion}
                                         start_date={item.start_date}

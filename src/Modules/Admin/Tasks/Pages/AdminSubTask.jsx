@@ -13,6 +13,8 @@ export default function AdminSubTask() {
     const [subtasks, setSubtasks] = useState([]);
     const isAdmin = true;
     const isSubtask = true;
+
+    console.log(taskdata);
     
 
     // get task id to show it

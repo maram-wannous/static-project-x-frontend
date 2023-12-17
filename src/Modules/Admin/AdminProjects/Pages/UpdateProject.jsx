@@ -95,7 +95,7 @@ export default function UpdateProject(){
 
     return (
         <div className="RA-bgBlue">
-            <h1 className="RA-HeaderStyle">Projects / Create Project</h1>
+            <h1 className="RA-HeaderStyle">Projects / Update Project</h1>
             {loading && <Loading />}
             <form className="RA-bgWhite RA-MarginBox">
                 <div className="d-flex row justify-content-center">

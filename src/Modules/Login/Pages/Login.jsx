@@ -5,7 +5,8 @@ import loginImg from '../../../assets/login.png'
 import './login.css'
 import { useState } from "react";
 import Loading from "../../../Routes/Loading";
-import { useNavigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 
 
@@ -14,7 +15,7 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setErr] = useState("");
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     
     
     
@@ -29,8 +30,8 @@ export default function Login() {
             setLoading(false);
             localStorage.setItem('bearer', email);
             // <Navigate to='/static-project-x-frontend/dashboard/'/>
-            // window.location.pathname= '/static-project-x-frontend/dashboard/';
-            navigate("/static-project-x-frontend/dashboard/")
+            window.location.pathname= '/static-project-x-frontend/dashboard/';
+            // navigate("/static-project-x-frontend/dashboard/")
         }else if (email !== admin || email !== user || password < 6 ) {
             setLoading(false);
             setErr("wrong email or password");

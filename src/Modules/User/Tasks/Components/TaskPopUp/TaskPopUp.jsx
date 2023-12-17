@@ -19,7 +19,7 @@ import './TaskPopUp.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function TaskPopUp ({closePopup, openPopUp}) {
+export default function TaskPopUp ({closePopup, openPopUp, id}) {
     const [isVisible,setIsVisible]= useState(false);
     const hundleClick=()=> setIsVisible(true); 
     const hundleClick2=()=> setIsVisible(false); 
@@ -30,7 +30,7 @@ export default function TaskPopUp ({closePopup, openPopUp}) {
              <div className='si-subtask'>
                 <div className='si-xtitle'>
                 <p>Project / Task ID-1234</p>
-                <Link to={'/static-project-x-frontend/dashboard/usertasks/subtask'}><img className='xp' onClick={() => closePopup(openPopUp)} src={x}/></Link>
+                <Link to={`/static-project-x-frontend/dashboard/usertasks/subtask/${id}`}><img className='xp' onClick={() => closePopup(openPopUp)} src={x}/></Link>
                 </div>
                 <h1>Make a Suitable form</h1>
                 <section>
